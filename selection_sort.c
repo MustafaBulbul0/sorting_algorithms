@@ -56,5 +56,6 @@ int main(int argc, char **argv)
         printf("%d ", num_arr[i]);
         i++;
     }
+    free(num_arr);
     return (0);
 }
