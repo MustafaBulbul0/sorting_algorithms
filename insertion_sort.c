@@ -5,45 +5,19 @@ void    insertion_sort(int *arr, int size)
 {
     int i;
     int j;
-    int k;
     int temp;
 
     i = 0;
     while (i < size)
     {
-        j = i + 1;
-        if (arr[j] < arr[i])
+         temp = arr[i];
+        j = i - 1;
+        while (j >= 0 && arr[j] > temp)
         {
-            if (arr[j] < arr[0])
-            {
-                temp = arr[j];
-                while (j > 0)
-                {
-                    arr[j] = arr[j - 1];
-                    j--;
-                }
-                arr[0] = temp;
-            }
-            else
-            {
-                k = i;
-                while (k < 0)
-                {
-                    if ((arr[j] < arr[k]) && (arr[j] > arr[k + 1]))
-                    {
-                        while (j > k + 1)
-                        {
-                            temp = arr[j];
-                            arr[j] = arr[j - 1];
-                            j--;
-                        }
-                        arr[k + 1] = temp;
-                        break ;
-                    }
-                    k--;
-                }
-            }
+            arr[j + 1] = arr[j];
+            j--;
         }
+        arr[j + 1] = temp;
         i++;
     }
 }

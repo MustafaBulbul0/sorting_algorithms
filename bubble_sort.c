@@ -34,10 +34,7 @@ int main(int argc, char **argv)
 
     i = 0;
     if (argc < 2)
-    {
-        printf("Please provide numbers as arguments.\n");
         return (1);
-    }
     num_arr = (int *)calloc((argc - 1), sizeof(int));
     if (!num_arr)
         return (2);
