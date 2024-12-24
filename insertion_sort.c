@@ -48,7 +48,7 @@ void    insertion_sort(int *arr, int size)
     }
 }
 
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
     int *num_arr;
     int i;
